@@ -41,5 +41,10 @@ function add_my_stylesheet()
 
 add_action('wp_enqueue_scripts', 'add_my_stylesheet');
 
+add_action( 'after_setup_theme', 'custom_image_size_carousel' );
 
+function custom_image_size_carousel ()
+{
+    add_image_size( 'amazon_thumbnail', 150, 150, false );
+}
 
