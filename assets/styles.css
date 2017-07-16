@@ -1,0 +1,116 @@
+/*
+ * Amazon Carousel
+ */
+
+.amazon-carousel {
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.amazon-carousel * {
+    box-sizing: inherit;
+}
+
+.amazon-carousel-item {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.amazon-carousel-item a {
+    color: #000;
+    display: block;
+    text-decoration: none;
+}
+
+.amazon-carousel-item p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.amazon-carousel-item img {
+    height: auto;
+    max-width: 100%;
+}
+
+@media (min-width: 40.063em) {
+    .amazon-carousel {
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 -10px;
+    }
+
+    .amazon-carousel-item {
+        flex: 1 1 auto;
+        min-width: 250px;
+        padding: 0 10px;
+        text-align: center;
+        width: 50%;
+    }
+}
+
+@media (min-width: 64.063em) {
+    .amazon-carousel-item {
+        width: 25%;
+    }
+
+    .amazon-carousel-item p {
+        font-size: 18px;
+    }
+}
+
+
+/*
+ * Amazon Single
+ */
+
+.amazon-item {
+    box-sizing: border-box;
+    float: left;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    max-width: 33%;
+    text-align: center;
+}
+
+.amazon-item * {
+    box-sizing: inherit;
+}
+
+.amazon-item a {
+    color: #000;
+    display: block;
+    text-decoration: none;
+}
+
+.amazon-item img {
+    height: auto;
+    max-width: 100%;
+}
+
+.amazon-item p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+@media (min-width: 64.063em) {
+    .amazon-item p {
+        font-size: 18px;
+    }
+}
+
+
+/*
+ *Utilities
+ */
+
+.text-center {
+    text-align: center;
+}
