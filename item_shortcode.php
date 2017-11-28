@@ -36,23 +36,15 @@ class itemShortcode {
     {
         $post_id = get_the_ID();
 
-        $carousels = array();
         if  ( have_rows('amazon_single_items', $post_id) ) {
-
+            $rows = get_field('amazon_single_items', $post_id)  ;
             // loop through the rows of data
-            while ( have_rows('amazon_single_items', $post_id) ) {
-
-                the_row();
+            foreach  ( $rows as $item ) {
 
                 // display a sub field value
-                if (get_sub_field('amazon_item_id', $post_id) == $id)
+                if ($item['amazon_item_id'] == $id)
                 {
-                    $result = array (
-                        'product_link' => get_sub_field('product_link', $post_id),
-                        'product_image' => get_sub_field('product_image', $post_id),
-                        'product_name' => get_sub_field('product_name', $post_id),
-                    );
-                    return $result;
+                    return $item;
                 }
             }
         }
